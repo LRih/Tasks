@@ -37,7 +37,7 @@ namespace Tasks
                 case Task.Type.Assignment: return Color.FromArgb(225, 50, 50);
                 case Task.Type.Deadline: return Color.FromArgb(50, 170, 80);
                 case Task.Type.School: return Color.FromArgb(80, 50, 200);
-                default: return this.ForeColor;
+                default: return Color.FromArgb(51, 51, 51);
             }
         }
         private Color GetMarkerColor(Task task)

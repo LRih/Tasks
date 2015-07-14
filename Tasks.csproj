@@ -48,30 +48,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\SaveManager.cs" />
-    <Compile Include="src\Task.cs" />
-    <Compile Include="src\TaskEditForm.cs">
+    <Compile Include="src\Controls\Calendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\Controls\CalendarForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\TaskEditForm.Designer.cs">
+    <Compile Include="src\Controls\CalendarForm.Designer.cs">
+      <DependentUpon>CalendarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Model\SaveManager.cs" />
+    <Compile Include="src\Model\Task.cs" />
+    <Compile Include="src\Controls\TaskEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Controls\TaskEditForm.Designer.cs">
       <DependentUpon>TaskEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\Tasks.cs" />
-    <Compile Include="src\TasksForm.cs">
+    <Compile Include="src\Model\Tasks.cs" />
+    <Compile Include="src\Controls\TasksForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\TasksForm.Designer.cs">
+    <Compile Include="src\Controls\TasksForm.Designer.cs">
       <DependentUpon>TasksForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\TasksListBox.cs">
+    <Compile Include="src\Controls\TasksListBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="src\TaskEditForm.resx">
+    <EmbeddedResource Include="src\Controls\CalendarForm.resx">
+      <DependentUpon>CalendarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Controls\TaskEditForm.resx">
       <DependentUpon>TaskEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\TasksForm.resx">
+    <EmbeddedResource Include="src\Controls\TasksForm.resx">
       <DependentUpon>TasksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

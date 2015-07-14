@@ -49,14 +49,14 @@
             this.menuCopy,
             this.menuDelete});
             this.menuList.Name = "menuList";
-            this.menuList.Size = new System.Drawing.Size(153, 92);
+            this.menuList.Size = new System.Drawing.Size(108, 70);
             this.menuList.Opening += new System.ComponentModel.CancelEventHandler(this.menuList_Opening);
             // 
             // menuAdd
             // 
             this.menuAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.menuAdd.Name = "menuAdd";
-            this.menuAdd.Size = new System.Drawing.Size(152, 22);
+            this.menuAdd.Size = new System.Drawing.Size(107, 22);
             this.menuAdd.Text = "Add";
             this.menuAdd.Click += new System.EventHandler(this.menuAdd_Click);
             // 
@@ -64,7 +64,7 @@
             // 
             this.menuCopy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.menuCopy.Name = "menuCopy";
-            this.menuCopy.Size = new System.Drawing.Size(152, 22);
+            this.menuCopy.Size = new System.Drawing.Size(107, 22);
             this.menuCopy.Text = "Copy";
             this.menuCopy.Click += new System.EventHandler(this.menuCopy_Click);
             // 
@@ -72,7 +72,7 @@
             // 
             this.menuDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.menuDelete.Name = "menuDelete";
-            this.menuDelete.Size = new System.Drawing.Size(152, 22);
+            this.menuDelete.Size = new System.Drawing.Size(107, 22);
             this.menuDelete.Text = "Delete";
             this.menuDelete.Click += new System.EventHandler(this.menuDelete_Click);
             // 
@@ -125,13 +125,13 @@
             this.Controls.Add(this.lstTasks);
             this.Font = new System.Drawing.Font("Meiryo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "TasksForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Tasks";
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TasksForm_FormClosing);
             this.menuList.ResumeLayout(false);
             this.menuNotify.ResumeLayout(false);
             this.ResumeLayout(false);

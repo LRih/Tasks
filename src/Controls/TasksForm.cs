@@ -31,8 +31,9 @@ namespace Tasks
         }
 
         //===================================================================== TERMINATE
-        private void TasksForm_FormClosing(object sender, FormClosingEventArgs e)
+        protected override void OnFormClosing(FormClosingEventArgs e)
         {
+            base.OnFormClosing(e);
             SaveManager.SaveTasks(_tasks);
         }
 
@@ -50,6 +51,19 @@ namespace Tasks
         }
 
         //===================================================================== EVENTS
+        protected override void OnKeyDown(KeyEventArgs e)
+        {
+            base.OnKeyUp(e);
+            if (e.KeyCode == Keys.F12)
+            {
+                using (CalendarForm dialog = new CalendarForm())
+                {
+                    dialog.Tasks = _tasks;
+                    dialog.ShowDialog(this);
+                }
+            }
+        }
+
         private void menuList_Opening(object sender, CancelEventArgs e)
         {
             menuList.Items[1].Enabled = menuList.Items[2].Enabled = (lstTasks.SelectedIndex != -1);

@@ -33,6 +33,13 @@ namespace Tasks
         {
             return _tasks[index];
         }
+        public List<Task> GetTasksOn(DateTime date)
+        {
+            List<Task> tasks = new List<Task>();
+            foreach (Task task in _tasks)
+                if (task.Date.Date == date.Date) tasks.Add(task);
+            return tasks;
+        }
 
         //===================================================================== PROPERTIES
         public IEnumerator GetEnumerator()
