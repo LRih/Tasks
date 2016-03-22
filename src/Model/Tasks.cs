@@ -37,7 +37,8 @@ namespace Tasks
         {
             List<Task> tasks = new List<Task>();
             foreach (Task task in _tasks)
-                if (task.Date.Date == date.Date) tasks.Add(task);
+                if (task.Date.Date == date.Date)
+                    tasks.Add(task);
             return tasks;
         }
 
@@ -57,7 +58,8 @@ namespace Tasks
             get
             {
                 foreach (Task task in _tasks)
-                    if (task.IsRemindRequired) return true;
+                    if (task.IsRemindRequired)
+                        return true;
                 return false;
             }
         }

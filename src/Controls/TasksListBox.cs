@@ -27,15 +27,15 @@ namespace Tasks
             if (isSelected) return Color.FromArgb(215, 240, 240);
             else if (task.IsDue) return Color.FromArgb(255, 225, 240);
             else if (task.IsRemindRequired) return Color.FromArgb(255, 255, 190);
-            else return this.BackColor;
+            return this.BackColor;
         }
         private Color GetItemForeColor(Task task)
         {
             switch (task.TaskType)
             {
-                case Task.Type.Appointment: return Color.FromArgb(80, 170, 50);
+                case Task.Type.Appointment: return Color.FromArgb(50, 170, 80);
                 case Task.Type.Assignment: return Color.FromArgb(225, 50, 50);
-                case Task.Type.Deadline: return Color.FromArgb(50, 170, 80);
+                case Task.Type.Deadline: return Color.FromArgb(57, 133, 158);
                 case Task.Type.School: return Color.FromArgb(80, 50, 200);
                 default: return Color.FromArgb(51, 51, 51);
             }
@@ -49,11 +49,12 @@ namespace Tasks
         private string GetItemName(Task task)
         {
             long absDays = Math.Abs(task.DaysUntilNow);
+
             if (absDays == 0) return "Today";
             else if (absDays < 2 * 7) return task.DaysUntilNow + " d";
             else if (absDays < 2 * 30) return task.DaysUntilNow / 7 + " wk";
             else if (absDays < 2 * 365) return task.DaysUntilNow / 30 + " mth";
-            else return task.DaysUntilNow / 365 + " yr";
+            return task.DaysUntilNow / 365 + " yr";
         }
 
         //===================================================================== EVENTS
